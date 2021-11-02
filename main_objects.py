@@ -53,7 +53,7 @@ class ToDo:
     def get_time_rem(self):
         if self.status == DONE:
             return aux.unify_line_length("--/--", 9)
-        elif self.deadline == 0:
+        elif self.deadline == math.inf:
             return aux.reformat(aux.unify_line_length('+inf', 9), 'highlight')
         delta = dat.datetime.fromtimestamp(self.deadline) - dat.datetime.now()
         return aux.show_time_rem(delta)

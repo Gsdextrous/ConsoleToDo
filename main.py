@@ -2,6 +2,7 @@ import auxilliaries as aux
 from database import events, save_progress_and_quit
 from main_objects import stat_list
 import main_funcs as f_pool
+import config   # yet redundant, but required to install further updates
 
 
 command_names = {
@@ -19,7 +20,7 @@ command_names = {
     '.delete_all': lambda x: f_pool.delete_all_todos(),
     '.destruct_all': lambda x: f_pool.destroy_all_todos(),
     '.revive_all': lambda x: f_pool.revive_all_todos(),
-    '.renew': lambda x: f_pool.renew_deadlines()
+    '.renew': lambda x: f_pool.renew()
 
 }
 
@@ -46,7 +47,7 @@ def command_handler(input_line):
         aux.printf('if you want to leave the program, type ".exit"', 'highlight')
 
 
-print('Welcome again in GS-ToDo v 1.3.6')
+print(f'Welcome again in GS-ToDo v {config.VERSION}')
 refresh_stat()
 
 while True:
