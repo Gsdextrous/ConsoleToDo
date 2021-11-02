@@ -1,6 +1,6 @@
 from main_objects import *      # ToDo, Status
 from database import events
-from auxilliaries import multiline_input, get_random_sequence, concat_date
+from auxilliaries import multiline_input, get_random_sequence
 
 
 def add_todo():
@@ -181,9 +181,7 @@ def revive_all_todos():
 
 # temporary commands
 
-def renew_deadlines():
-    for event in events:
-        if event.deadline == 0:
-            event.set_deadline(None)
+def renew():
+    aux.printf('Nothing to renew yet', 'highlight')
 
 

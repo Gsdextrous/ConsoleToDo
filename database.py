@@ -17,5 +17,9 @@ def load_progress(filename):
 
 events = []
 
-load_progress('events.pickle')
+try:
+    load_progress('events.pickle')
+except FileNotFoundError:
+    pass
+
 
