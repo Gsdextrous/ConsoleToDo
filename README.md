@@ -64,7 +64,7 @@ I ain't the sharpest tool
 in the shed
 ```
 ```commandline
-.show
+>> .show
 Urgent task       | Somebody         | time left: 57d 07h     | 1   pts left | ID @once
 Urgent task       | Research!        | time left: 26d 07h     | 10  pts left | ID @res
 Ordinary task     | Homework         | time left: -2d 16h     | 3   pts left | ID @dz
