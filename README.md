@@ -22,13 +22,56 @@ If a function is applied to the whole ToDo list (i.e. to a non-determined object
 All non-empty ID's starts with '@'.
 
 **.add** - adds new event in your ToDo list and setting main features like  
-name,  
-custom ID (if you skip this step, app will generate a random ID), detailed info,  
-deadline,  
-status (ordinary/urgent/done),  
-required achievement points (if task completion means completing several subtasks) 
+_name_,  
+_custom ID_ (if you skip this step, app will generate a random ID),  
+_detailed info_ (to finish multiline input, press Ctrl+Enter to make '__________' or type it by yourself and then press Enter),  
+_deadline_,  
+_status_ (ordinary/urgent/done),  
+_required achievement points_ (if task completion means completing several subtasks) 
 
-**.show** - shows common and detailed info about an event or all events  
+```commandline
+>> .add
+name?
+>> Somebody
+custom ID (without '@') ?
+>> once
+add some info?
+>> told_me
+>> the world is gonna
+>> roll me
+>> I ain't the sharpest tool
+>> in the shed
+>> __________
+achievement points?
+>> 1
+ordinary/urgent/done
+>> 2
+active till?
+31.12.21
+```
+
+
+**.show** - shows common and detailed info about an event or all events 
+```commandline
+@once.show
+common info:
+Urgent task       | Somebody | time_left: 57d 07h     | 1 pts left | ID @once
+details:
+told me
+the world is gonna
+roll me
+I ain't the sharpest tool
+in the shed
+```
+```commandline
+.show
+Urgent task       | Somebody         | time left: 57d 07h     | 1   pts left | ID @once
+Urgent task       | Research!        | time left: 26d 07h     | 10  pts left | ID @res
+Ordinary task     | Homework         | time left: -2d 16h     | 3   pts left | ID @dz
+Completed         | Las-Vegas        | time left: --/--       | 1   pts left | ID @joycasino
+```
+(In practice, the above text is a bit more colorized)
+
 **.done** - changes your event status to ‘Done’  
 **.delete** - deletes your event, but you are still able to recover it  
 **.update_info** - changes detailed info of the event  
