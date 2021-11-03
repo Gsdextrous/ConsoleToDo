@@ -53,7 +53,7 @@ active till?
 
 **.show** - shows common and detailed info about an event or all events 
 ```commandline
-@once.show
+>> @once.show
 common info:
 Urgent task       | Somebody | time_left: 57d 07h     | 1 pts left | ID @once
 details:
